@@ -1,36 +1,136 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Almeida & Rocha Advocacia
 
-## Getting Started
+Website institucional completo para escritório de advocacia premium, com design moderno, foco em conversão e experiência profissional.
 
-First, run the development server:
+## 🎯 Características
+
+- ✅ **6 páginas completas** (Home, Sobre, Áreas, Equipe, Conteúdos, Contato)
+- ✅ **Design premium** com tema escuro (#0F1115) e acentos dourados (#C9A227)
+- ✅ **100% responsivo** (mobile, tablet, desktop)
+- ✅ **Integração WhatsApp** em todos os CTAs
+- ✅ **Formulário de contato** com validação
+- ✅ **Animações suaves** com Framer Motion
+- ✅ **SEO otimizado** com meta tags completas
+- ✅ **Acessibilidade** (WCAG AA)
+- ✅ **Copy profissional** em português brasileiro
+
+## 🚀 Como Usar
+
+### Instalação
+
+```bash
+cd /home/jonorusc/projects/advogacia
+npm install
+```
+
+### Desenvolvimento
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra [http://localhost:3000](http://localhost:3000) no navegador.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build de Produção
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## ⚙️ Configuração
 
-To learn more about Next.js, take a look at the following resources:
+### 1. Atualizar Informações de Contato
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Edite `lib/constants.ts`:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```typescript
+export const SITE_CONFIG = {
+  contact: {
+    phone: "(11) 99999-9999",        // Seu telefone
+    email: "contato@seusite.com.br", // Seu e-mail
+    whatsapp: "5511999999999",       // Seu WhatsApp (IMPORTANTE!)
+    address: {
+      street: "Seu endereço completo",
+      city: "Sua Cidade",
+      state: "UF",
+      zip: "00000-000",
+    },
+  },
+  // ...
+};
+```
 
-## Deploy on Vercel
+### 2. Personalizar Conteúdo
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Áreas de Atuação:** Edite `PRACTICE_AREAS` em `lib/constants.ts`
+- **FAQ:** Edite `FAQ_ITEMS` em `lib/constants.ts`
+- **Depoimentos:** Edite `TESTIMONIALS` em `lib/constants.ts`
+- **Equipe:** Edite o array `team` em `app/equipe/page.tsx`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📁 Estrutura do Projeto
+
+```
+advogacia/
+├── app/                    # Páginas Next.js
+│   ├── layout.tsx         # Layout raiz
+│   ├── page.tsx           # Home
+│   ├── sobre/             # Página Sobre
+│   ├── areas/             # Áreas de Atuação
+│   ├── equipe/            # Equipe
+│   ├── conteudos/         # Blog
+│   ├── contato/           # Contato
+│   └── obrigado/          # Thank You
+├── components/            # Componentes React
+│   ├── layout/           # Header, Footer
+│   ├── home/             # Seções da Home
+│   └── ui/               # Componentes UI
+├── lib/                  # Utilitários
+│   ├── utils.ts         # Funções helper
+│   └── constants.ts     # Constantes do site
+└── tailwind.config.ts   # Configuração Tailwind
+```
+
+## 🎨 Design System
+
+### Cores
+
+```css
+Background:  #0F1115  /* Preto/azul escuro */
+Foreground:  #EDEDED  /* Cinza claro */
+Accent:      #C9A227  /* Dourado premium */
+Muted:       #64748B  /* Cinza médio */
+```
+
+### Tipografia
+
+- **Títulos:** EB Garamond (Serifada, elegante)
+- **Corpo:** Lato (Sans-serif, profissional)
+
+## 📱 Páginas
+
+1. **Home (/)** - Landing page completa com todas as seções
+2. **Sobre (/sobre)** - História, valores e diferenciais
+3. **Áreas (/areas)** - Detalhamento das 6 áreas de atuação
+4. **Equipe (/equipe)** - Perfis dos advogados
+5. **Conteúdos (/conteudos)** - Blog/artigos
+6. **Contato (/contato)** - Formulário e informações
+7. **Obrigado (/obrigado)** - Confirmação de envio
+
+## 🔧 Tecnologias
+
+- **Next.js 14** - Framework React
+- **TypeScript** - Tipagem estática
+- **Tailwind CSS** - Estilização
+- **Framer Motion** - Animações
+- **Lucide React** - Ícones
+- **React Hook Form** - Formulários
+- **Zod** - Validação
+
+## 📝 Licença
+
+Projeto desenvolvido para Almeida & Rocha Advocacia.
+
+## 🆘 Suporte
+
+Para dúvidas ou customizações, consulte a documentação completa em `walkthrough.md`.

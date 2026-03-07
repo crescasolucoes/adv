@@ -1,26 +1,118 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  --color-background: #0F1419;
+  /* Deep Blue-Black - Premium Dark */
+  --color-foreground: #FAFBFC;
+  /* Pure White */
+  --color-accent: #B8860B;
+  /* Dark Goldenrod - Premium Gold */
+  --color-highlight: #E8C468;
+  /* Light Gold - Hover State */
+  --color-secondary: #1A2332;
+  /* Dark Slate Blue - Card Background */
+  --color-muted: #8B92A0;
+  /* Blue-Gray - Secondary Text */
+  --color-border: #2A3441;
+  /* Subtle Border */
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --font-display: var(--font-syne);
+  --font-body: var(--font-plus-jakarta);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  --animate-fade-in: fadeIn 0.6s ease-out;
+  --animate-slide-up: slideUp 0.6s ease-out;
+  --animate-scale-in: scaleIn 0.4s ease-out;
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes scaleIn {
+    from {
+      transform: scale(0.95);
+      opacity: 0;
+    }
+
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Custom Utilities */
+@layer utilities {
+  .glass {
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .glass-hover {
+    transition: all 0.3s ease;
+  }
+
+  .glass-hover:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(232, 196, 104, 0.4);
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, #B8860B, #E8C468, #D4AF37);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* Premium Card Style */
+  .premium-card {
+    position: relative;
+    background: rgba(26, 35, 50, 0.4);
+    border: 1px solid rgba(184, 134, 11, 0.2);
+    transition: all 0.3s ease;
+  }
+
+  .premium-card:hover {
+    background: rgba(26, 35, 50, 0.6);
+    border-color: rgba(232, 196, 104, 0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px -10px rgba(184, 134, 11, 0.3);
+  }
+}
+
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display);
+    font-weight: 600;
+  }
 }
