@@ -10,7 +10,6 @@ const navigation = [
     { name: "Home", href: "/" },
     { name: "Sobre", href: "/sobre" },
     { name: "Áreas de Atuação", href: "/areas" },
-    { name: "Equipe", href: "/equipe" },
     // { name: "Conteúdos", href: "/conteudos" },
     // { name: "Contato", href: "/contato" },
 ];
@@ -29,10 +28,10 @@ export default function Header() {
                         <div className="absolute -left-4 top-1/2 -translate-y-1/2 w-1 h-12 bg-accent transform origin-left group-hover:scale-y-125 transition-transform duration-300"></div>
                         <div className="flex flex-col">
                             <span className="text-2xl font-display font-bold text-foreground group-hover:text-accent transition-colors duration-300 tracking-tight">
-                                Advocacia
+                                Arthur Ybson
                             </span>
                             <span className="text-[10px] text-muted uppercase tracking-[0.2em] font-semibold">
-                                Advocacia
+                                Advogado
                             </span>
                         </div>
                     </Link>

@@ -49,7 +49,7 @@ export default function HowItWorks() {
                             <div
                                 className="absolute inset-0 transition-transform duration-700 group-hover:scale-105"
                                 style={{
-                                    backgroundImage: 'url("https://images.unsplash.com/photo-1589578527966-fdac0f44566c?auto=format&fit=crop&q=80&w=800")',
+                                    backgroundImage: 'url("/images/metodology.jpeg")',
                                     backgroundSize: 'cover',
                                     backgroundPosition: 'center',
                                 }}
@@ -66,7 +66,7 @@ export default function HowItWorks() {
                                         <Scale className="w-5 h-5 text-accent" />
                                     </div>
                                     <div>
-                                        <p className="text-sm font-bold text-foreground">Advogado</p>
+                                        <p className="text-sm font-bold text-foreground">Arthur Ybson</p>
                                         <p className="text-xs text-muted">Advogado Especialista</p>
                                     </div>
                                 </div>

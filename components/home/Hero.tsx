@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowRight, CheckCircle2, Shield } from "lucide-react";
+import { ArrowRight, CheckCircle2, Shield, MapPin } from "lucide-react";
 import { useRef } from "react";
 import Image from "next/image";
 
@@ -46,15 +46,19 @@ export default function Hero({ onOpenContactModal }: HeroProps) {
                         transition={{ duration: 0.8 }}
                         className="text-left order-2 lg:order-1"
                     >
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.2 }}
-                            className="inline-flex items-center space-x-2 mb-6 bg-accent/10 border border-accent/20 px-3 py-1 rounded text-accent text-sm font-semibold tracking-wide uppercase"
-                        >
-                            <Shield className="w-4 h-4" />
-                            <span>Advogado Especialista</span>
-                        </motion.div>
+                        <div className="flex flex-wrap items-center gap-3 mb-6">
+
+
+                            <motion.div
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ delay: 0.3 }}
+                                className="inline-flex items-center space-x-2 bg-white/5 border border-white/10 px-3 py-1.5 rounded-md text-muted font-medium text-sm"
+                            >
+                                <MapPin className="w-4 h-4" />
+                                <span>Mossoró, RN</span>
+                            </motion.div>
+                        </div>
 
                         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-foreground mb-6 leading-[1.1]">
                             Minha missão é <span className="text-gradient">proteger o seu futuro</span>
@@ -97,40 +101,50 @@ export default function Hero({ onOpenContactModal }: HeroProps) {
                     </motion.div>
 
                     {/* Right Column - Lawyer Portrait */}
+                    {/* Right Column - Lawyer Portrait */}
                     <motion.div
                         initial={{ opacity: 0, scale: 0.95 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.8, delay: 0.2 }}
-                        className="flex justify-center lg:justify-end order-1 lg:order-2 relative"
+                        className="flex justify-center lg:justify-end order-1 lg:order-2 relative w-full"
                     >
-                        {/* Glow Behind Image */}
-                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-accent/20 rounded-full blur-[100px] -z-10"></div>
+                        {/* Decorative Glow Elements */}
+                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-accent/20 rounded-full blur-[120px] -z-10"></div>
 
-                        <div className="relative w-full max-w-md h-[500px] overflow-hidden">
+                        {/* Premium Abstract Shape Behind Image */}
+                        <div className="absolute -inset-4 bg-linear-to-tr from-accent/20 to-transparent rounded-[2.5rem] rotate-3 blur-sm -z-10 hidden lg:block"></div>
+
+                        <div className="relative w-full max-w-[420px] h-[500px] lg:h-[650px] rounded-4xl overflow-hidden border border-white/10 shadow-2xl group bg-background/50">
                             <Image
-                                src="/lawyer.png"
+                                src="/images/hero.jpg"
                                 alt="Retrato do Advogado Especialista"
                                 fill
-                                className="object-cover"
+                                quality={100}
+                                className="object-cover object-top transition-transform duration-1000 group-hover:scale-105"
                                 priority
                             />
-                            {/* Gradient Overlay for better blending at the bottom */}
-                            <div className="absolute inset-0 bg-linear-to-t from-background via-transparent to-transparent opacity-80"></div>
+
+                            {/* Premium Overlays */}
+                            {/* 1. Dramatic bottom gradient for blending */}
+                            <div className="absolute inset-0 bg-linear-to-t from-background via-background/20 to-transparent opacity-90 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                            {/* 2. Sleek inner glow/border */}
+                            <div className="absolute inset-0 rounded-4xl ring-1 ring-inset ring-white/10 pointer-events-none"></div>
                         </div>
 
                         {/* Floating Badge */}
                         <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
+                            initial={{ opacity: 0, y: 20, x: -20 }}
+                            animate={{ opacity: 1, y: 0, x: 0 }}
                             transition={{ delay: 0.8, duration: 0.5 }}
-                            className="absolute -bottom-6 -left-6 glass p-4 rounded-xl border border-white/10 shadow-xl flex items-center space-x-3"
+                            className="absolute bottom-6 -left-4 lg:bottom-12 lg:-left-12 glass p-4 lg:p-5 rounded-2xl border border-white/10 shadow-2xl flex items-center space-x-4 backdrop-blur-md bg-background/60"
                         >
-                            <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center hidden sm:flex">
-                                <Shield className="w-6 h-6 text-accent" />
+                            <div className="w-10 h-10 lg:w-12 lg:h-12 rounded-full bg-accent/20 flex items-center justify-center shrink-0">
+                                <Shield className="w-5 h-5 lg:w-6 lg:h-6 text-accent" />
                             </div>
                             <div>
-                                <p className="text-sm font-bold text-foreground">Alta Complexidade</p>
-                                <p className="text-xs text-muted">Foco em Resultados</p>
+                                <p className="text-sm lg:text-base font-bold text-foreground">Alta Complexidade</p>
+                                <p className="text-xs lg:text-sm text-muted">Foco em Resultados</p>
                             </div>
                         </motion.div>
                     </motion.div>

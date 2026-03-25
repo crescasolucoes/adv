@@ -5,8 +5,10 @@ export function cn(...inputs: ClassValue[]) {
     return twMerge(clsx(inputs));
 }
 
+import { SITE_CONFIG } from "./constants";
+
 export function generateWhatsAppLink(message: string = ""): string {
-    const phoneNumber = "5511999999999"; // Replace with actual number
+    const phoneNumber = SITE_CONFIG.contact.whatsapp;
     const encodedMessage = encodeURIComponent(message);
     return `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
 }

@@ -22,7 +22,7 @@ const plusJakarta = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   title: "Advocacia | Assessoria Jurídica Estratégica",
   description: "Assessoria jurídica estratégica com foco em segurança e resultado. Atendimento humanizado, transparência e atuação técnica para proteger seus interesses.",
-  keywords: ["advocacia", "advogado", "direito", "jurídico", "São Paulo", "assessoria jurídica"],
+  keywords: ["advocacia", "advogado", "direito", "jurídico", "Mossoró", "RN", "assessoria jurídica"],
   authors: [{ name: "Advocacia Especializada" }],
   openGraph: {
     title: "Advocacia Especializada",

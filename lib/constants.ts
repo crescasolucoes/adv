@@ -4,31 +4,30 @@ export const SITE_CONFIG = {
     url: "https://advocacia.com.br",
 
     contact: {
-        phone: "(11) 99999-9999",
-        email: "contato@advocacia.com.br",
-        whatsapp: "5511999999999",
+        phone: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "",
+        email: process.env.NEXT_PUBLIC_EMAIL || "",
+        whatsapp: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "",
         address: {
-            street: "Av. Paulista, 1000 - Conjunto 1501",
-            city: "São Paulo",
-            state: "SP",
-            zip: "01310-100",
+            street: process.env.NEXT_PUBLIC_STREET || "",
+            city: process.env.NEXT_PUBLIC_CITY || "",
+            state: process.env.NEXT_PUBLIC_STATE || "",
+            zip: process.env.NEXT_PUBLIC_ZIP || "",
         },
     },
 
     businessHours: {
-        weekdays: "Segunda a Sexta: 9h às 18h",
-        saturday: "Sábado: 9h às 13h",
+        weekdays: process.env.NEXT_PUBLIC_BUSINESS_HOURS_WEEKDAYS || "",
+        saturday: process.env.NEXT_PUBLIC_BUSINESS_HOURS_SATURDAY || "",
     },
 
     social: {
-        linkedin: "https://linkedin.com/company/almeida-rocha",
-        instagram: "https://instagram.com/almeidarocha.adv",
-        facebook: "https://facebook.com/almeidarocha.adv",
+        linkedin: process.env.NEXT_PUBLIC_LINKEDIN || "",
+        instagram: process.env.NEXT_PUBLIC_INSTAGRAM || "",
+        facebook: process.env.NEXT_PUBLIC_FACEBOOK || "",
     },
 
     oab: {
-        primary: "OAB/SP 123.456",
-        secondary: "OAB/SP 789.012",
+        primary: process.env.NEXT_PUBLIC_OAB_PRIMARY || ""
     },
 };
 
@@ -92,7 +91,7 @@ export const FAQ_ITEMS = [
     },
     {
         question: "Vocês atendem em quais regiões?",
-        answer: "Nosso escritório está localizado em São Paulo/SP, mas atendemos clientes em todo o Brasil através de consultas online e atuação em processos digitais.",
+        answer: "Nosso escritório está localizado em Mossoró/RN, mas atendemos clientes em todo o Brasil através de consultas online e atuação em processos digitais.",
     },
     {
         question: "Como é garantida a confidencialidade?",

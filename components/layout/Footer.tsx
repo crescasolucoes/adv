@@ -19,33 +19,39 @@ export default function Footer() {
                             Atendimento humanizado e técnica jurídica de excelência.
                         </p>
                         <div className="flex space-x-4">
-                            <a
-                                href={SITE_CONFIG.social.linkedin}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-muted hover:text-accent transition-colors cursor-pointer"
-                                aria-label="LinkedIn"
-                            >
-                                <Linkedin className="w-5 h-5" />
-                            </a>
-                            <a
-                                href={SITE_CONFIG.social.instagram}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-muted hover:text-accent transition-colors cursor-pointer"
-                                aria-label="Instagram"
-                            >
-                                <Instagram className="w-5 h-5" />
-                            </a>
-                            <a
-                                href={SITE_CONFIG.social.facebook}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-muted hover:text-accent transition-colors cursor-pointer"
-                                aria-label="Facebook"
-                            >
-                                <Facebook className="w-5 h-5" />
-                            </a>
+                            {SITE_CONFIG.social.linkedin && (
+                                <a
+                                    href={SITE_CONFIG.social.linkedin}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-muted hover:text-accent transition-colors cursor-pointer"
+                                    aria-label="LinkedIn"
+                                >
+                                    <Linkedin className="w-5 h-5" />
+                                </a>
+                            )}
+                            {SITE_CONFIG.social.instagram && (
+                                <a
+                                    href={SITE_CONFIG.social.instagram}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-muted hover:text-accent transition-colors cursor-pointer"
+                                    aria-label="Instagram"
+                                >
+                                    <Instagram className="w-5 h-5" />
+                                </a>
+                            )}
+                            {SITE_CONFIG.social.facebook && (
+                                <a
+                                    href={SITE_CONFIG.social.facebook}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-muted hover:text-accent transition-colors cursor-pointer"
+                                    aria-label="Facebook"
+                                >
+                                    <Facebook className="w-5 h-5" />
+                                </a>
+                            )}
                         </div>
                     </div>
 
@@ -119,7 +125,7 @@ export default function Footer() {
                         </h3>
                         <ul className="space-y-2">
                             <li className="flex items-start space-x-3 text-sm">
-                                <Clock className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                                <Clock className="w-5 h-5 text-accent shrink-0 mt-0.5" />
                                 <div className="text-muted">
                                     <p>{SITE_CONFIG.businessHours.weekdays}</p>
                                     <p className="mt-1">{SITE_CONFIG.businessHours.saturday}</p>
@@ -129,8 +135,7 @@ export default function Footer() {
                         <div className="mt-6 p-4 glass rounded-lg">
                             <p className="text-xs text-muted">
                                 <strong className="text-foreground">OAB:</strong><br />
-                                {SITE_CONFIG.oab.primary}<br />
-                                {SITE_CONFIG.oab.secondary}
+                                {SITE_CONFIG.oab.primary}
                             </p>
                         </div>
                     </div>

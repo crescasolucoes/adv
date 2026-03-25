@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { MessageCircle, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { generateWhatsAppLink } from "@/lib/utils";
+import { SITE_CONFIG } from "@/lib/constants";
 
 export default function WhatsAppButton() {
     const [isVisible, setIsVisible] = useState(false);
@@ -21,6 +22,10 @@ export default function WhatsAppButton() {
             "_blank"
         );
     };
+
+    if (!SITE_CONFIG.contact.whatsapp) {
+        return null;
+    }
 
     return (
         <AnimatePresence>
