@@ -1,3 +1,5 @@
+import { Briefcase, Calculator, LucideProps, Shield } from "lucide-react";
+
 export const SITE_CONFIG = {
     name: "Advocacia Especializada",
     description: "Assessoria jurídica estratégica com foco em segurança e resultado",
@@ -31,6 +33,13 @@ export const SITE_CONFIG = {
     },
 };
 
+type IconMap = Record<string, React.ForwardRefExoticComponent<Omit<LucideProps, "ref"> & React.RefAttributes<SVGSVGElement>>>;
+export const iconMap: IconMap = {
+    Briefcase,
+    Calculator,
+    Shield
+};
+
 export const PRACTICE_AREAS = [
     {
         id: "empresarial",
@@ -40,41 +49,36 @@ export const PRACTICE_AREAS = [
         slug: "empresarial",
     },
     {
-        id: "civil",
-        title: "Direito Civil",
-        description: "Contratos, responsabilidade civil, indenizações e direitos do consumidor.",
-        icon: "Scale",
-        slug: "civil",
-    },
-    {
-        id: "trabalhista",
-        title: "Direito Trabalhista",
-        description: "Defesa em ações trabalhistas, rescisões e consultoria preventiva.",
-        icon: "Users",
-        slug: "trabalhista",
-    },
-    {
         id: "tributario",
         title: "Direito Tributário",
         description: "Planejamento tributário, recuperação de créditos e defesas fiscais.",
         icon: "Calculator",
         slug: "tributario",
     },
-    {
-        id: "imobiliario",
-        title: "Direito Imobiliário",
-        description: "Compra, venda, locação, regularização e usucapião de imóveis.",
-        icon: "Home",
-        slug: "imobiliario",
-    },
-    {
-        id: "familia",
-        title: "Família e Sucessões",
-        description: "Divórcio, inventário, testamento e planejamento sucessório.",
-        icon: "Heart",
-        slug: "familia-sucessoes",
-    },
+   {
+        id: "previdenciário",
+        title: "Direito Previdenciário",
+        description: "Assessoria em questões previdenciárias, aposentadorias, pensões e defesas trabalhistas.",
+        icon: "Shield",
+        slug: "previdenciario",
+    }
 ];
+
+
+export const areaDetails: Record<string, { services: string[]; cases: string[] }> = {
+    empresarial: {
+        services: ["Contratos empresariais", "Direito societário", "Compliance", "Fusões e aquisições"],
+        cases: ["Constituição de empresas", "Revisão de contratos", "Resolução de conflitos societários"],
+    },
+    tributario: {
+        services: ["Planejamento tributário", "Recuperação de créditos", "Defesas fiscais", "Consultoria"],
+        cases: ["Redução de carga tributária", "Contestação de autos de infração", "Parcelamentos fiscais"],
+    },
+    previdenciário: {
+        services: ["Aposentadorias", "Pensão por morte", "Auxílio-doença", "Defesas trabalhistas"],
+        cases: ["Concessão de aposentadoria", "Revisão de benefícios", "Recursos administrativos e judiciais"],
+    },
+};
 
 export const FAQ_ITEMS = [
     {

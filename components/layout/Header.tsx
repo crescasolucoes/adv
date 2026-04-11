@@ -8,7 +8,7 @@ import { generateWhatsAppLink } from "@/lib/utils";
 
 const navigation = [
     { name: "Home", href: "/" },
-    { name: "Sobre", href: "/sobre" },
+    // { name: "Sobre", href: "/sobre" },
     { name: "Áreas de Atuação", href: "/areas" },
     // { name: "Conteúdos", href: "/conteudos" },
     // { name: "Contato", href: "/contato" },

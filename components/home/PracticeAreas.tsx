@@ -2,17 +2,9 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Briefcase, Scale, Users, Calculator, Home, Heart, ArrowRight } from "lucide-react";
-import { PRACTICE_AREAS } from "@/lib/constants";
+import { ArrowRight } from "lucide-react";
+import {  PRACTICE_AREAS, iconMap } from "@/lib/constants";
 
-const iconMap: Record<string, any> = {
-    Briefcase,
-    Scale,
-    Users,
-    Calculator,
-    Home,
-    Heart,
-};
 
 export default function PracticeAreas() {
     return (

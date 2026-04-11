@@ -1,45 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Briefcase, Scale, Users, Calculator, Home, Heart, ArrowRight, CheckCircle } from "lucide-react";
-import { PRACTICE_AREAS } from "@/lib/constants";
+import { ArrowRight, CheckCircle, } from "lucide-react";
+import { areaDetails, PRACTICE_AREAS, iconMap } from "@/lib/constants";
 import Link from "next/link";
-
-const iconMap: Record<string, any> = {
-    Briefcase,
-    Scale,
-    Users,
-    Calculator,
-    Home,
-    Heart,
-};
-
-const areaDetails: Record<string, { services: string[]; cases: string[] }> = {
-    empresarial: {
-        services: ["Contratos empresariais", "Direito societário", "Compliance", "Fusões e aquisições"],
-        cases: ["Constituição de empresas", "Revisão de contratos", "Resolução de conflitos societários"],
-    },
-    civil: {
-        services: ["Contratos em geral", "Responsabilidade civil", "Direito do consumidor", "Indenizações"],
-        cases: ["Ações de indenização", "Revisão contratual", "Defesa do consumidor"],
-    },
-    trabalhista: {
-        services: ["Ações trabalhistas", "Consultoria preventiva", "Rescisões", "Acordos"],
-        cases: ["Defesa em reclamações trabalhistas", "Assessoria em demissões", "Negociações coletivas"],
-    },
-    tributario: {
-        services: ["Planejamento tributário", "Recuperação de créditos", "Defesas fiscais", "Consultoria"],
-        cases: ["Redução de carga tributária", "Contestação de autos de infração", "Parcelamentos fiscais"],
-    },
-    imobiliario: {
-        services: ["Compra e venda", "Locação", "Regularização", "Usucapião"],
-        cases: ["Contratos de compra e venda", "Ações de despejo", "Regularização de imóveis"],
-    },
-    familia: {
-        services: ["Divórcio", "Inventário", "Testamento", "Planejamento sucessório"],
-        cases: ["Divórcios consensuais e litigiosos", "Partilha de bens", "Sucessões"],
-    },
-};
 
 export default function AreasPage() {
     return (
