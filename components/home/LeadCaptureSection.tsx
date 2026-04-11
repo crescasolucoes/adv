@@ -76,7 +76,7 @@ export default function LeadCaptureSection() {
                         <div className="absolute top-0 right-0 w-64 h-64 bg-accent/5 rounded-full blur-3xl -z-10 group-hover:bg-accent/10 transition-colors duration-500"></div>
 
                         <div className="mb-6">
-                            <h3 className="text-2xl font-display font-bold text-foreground mb-2">
+                            <h3 className="text-2xl font-display font-bold text-white mb-2">
                                 Comece sua Análise Agora
                             </h3>
                             <p className="text-muted text-sm">

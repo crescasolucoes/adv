@@ -1,20 +1,13 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #0F1419;
-  /* Deep Blue-Black - Premium Dark */
-  --color-foreground: #FAFBFC;
-  /* Pure White */
-  --color-accent: #B8860B;
-  /* Dark Goldenrod - Premium Gold */
-  --color-highlight: #E8C468;
-  /* Light Gold - Hover State */
-  --color-secondary: #1A2332;
-  /* Dark Slate Blue - Card Background */
-  --color-muted: #8B92A0;
-  /* Blue-Gray - Secondary Text */
-  --color-border: #2A3441;
-  /* Subtle Border */
+  --color-background: #ffffff;
+  --color-foreground: #011627;
+  --color-accent: #0077b6;
+  --color-highlight: #00b4d8;
+  --color-secondary: #f0f9ff;
+  --color-muted: #64748b;
+  --color-border: #e2e8f0;
 
   --font-display: var(--font-syne);
   --font-body: var(--font-plus-jakarta);
@@ -71,9 +64,9 @@
 /* Custom Utilities */
 @layer utilities {
   .glass {
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(0, 119, 182, 0.1);
   }
 
   .glass-hover {
@@ -81,12 +74,12 @@
   }
 
   .glass-hover:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    border-color: rgba(232, 196, 104, 0.4);
+    background-color: rgba(255, 255, 255, 0.95);
+    border-color: rgba(0, 119, 182, 0.3);
   }
 
   .text-gradient {
-    background: linear-gradient(135deg, #B8860B, #E8C468, #D4AF37);
+    background: linear-gradient(135deg, #0077b6, #00b4d8, #03045e);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -95,16 +88,16 @@
   /* Premium Card Style */
   .premium-card {
     position: relative;
-    background: rgba(26, 35, 50, 0.4);
-    border: 1px solid rgba(184, 134, 11, 0.2);
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
     transition: all 0.3s ease;
   }
 
   .premium-card:hover {
-    background: rgba(26, 35, 50, 0.6);
-    border-color: rgba(232, 196, 104, 0.5);
+    background: #ffffff;
+    border-color: rgba(0, 119, 182, 0.3);
     transform: translateY(-2px);
-    box-shadow: 0 10px 30px -10px rgba(184, 134, 11, 0.3);
+    box-shadow: 0 20px 40px -15px rgba(0, 119, 182, 0.15);
   }
 }
 
