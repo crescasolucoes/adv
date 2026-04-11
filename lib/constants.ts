@@ -96,11 +96,7 @@ export const FAQ_ITEMS = [
     {
         question: "Como é garantida a confidencialidade?",
         answer: "Seguimos rigorosamente o Código de Ética da OAB. Todas as informações compartilhadas são protegidas por sigilo profissional absoluto, garantindo total privacidade e segurança.",
-    },
-    {
-        question: "Posso acompanhar meu processo online?",
-        answer: "Sim! Mantemos nossos clientes sempre informados através de relatórios periódicos por e-mail e WhatsApp, além de disponibilizar acesso aos andamentos processuais quando solicitado.",
-    },
+    }
 ];
 
 export const TESTIMONIALS = [
