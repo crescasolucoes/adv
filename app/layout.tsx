@@ -20,12 +20,12 @@ const plusJakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Advocacia | Assessoria Jurídica Estratégica",
+  title: "Arthur Ybson | Assessoria Jurídica Estratégica",
   description: "Assessoria jurídica estratégica com foco em segurança e resultado. Atendimento humanizado, transparência e atuação técnica para proteger seus interesses.",
   keywords: ["advocacia", "advogado", "direito", "jurídico", "Mossoró", "RN", "assessoria jurídica"],
-  authors: [{ name: "Advocacia Especializada" }],
+  authors: [{ name: "Arthur Ybson" }],
   openGraph: {
-    title: "Advocacia Especializada",
+    title: "Arthur Ybson",
     description: "Assessoria jurídica estratégica com foco em segurança e resultado",
     type: "website",
     locale: "pt_BR",

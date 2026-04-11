@@ -1,7 +1,7 @@
 import { Briefcase, Calculator, LucideProps, Shield } from "lucide-react";
 
 export const SITE_CONFIG = {
-    name: "Advocacia Especializada",
+    name: "Arthur Ybson",
     description: "Assessoria jurídica estratégica com foco em segurança e resultado",
     url: "https://advocacia.com.br",
 
@@ -55,7 +55,7 @@ export const PRACTICE_AREAS = [
         icon: "Calculator",
         slug: "tributario",
     },
-   {
+    {
         id: "previdenciário",
         title: "Direito Previdenciário",
         description: "Assessoria em questões previdenciárias, aposentadorias, pensões e defesas trabalhistas.",

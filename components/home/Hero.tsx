@@ -106,17 +106,18 @@ export default function Hero({ onOpenContactModal }: HeroProps) {
                         initial={{ opacity: 0, scale: 0.95 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.8, delay: 0.2 }}
-                        className="flex justify-center lg:justify-end order-1 lg:order-2 relative w-full"
+                        className="flex justify-center lg:justify-end order-1 lg:order-2 relative w-full lg:pl-10"
                     >
-                        {/* Decorative Glow Elements */}
-                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-accent/20 rounded-full blur-[120px] -z-10"></div>
+                        {/* Decorative Glow Elements - Enhanced */}
+                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[140%] h-[140%] bg-accent/25 rounded-full blur-[140px] -z-10 animate-pulse-slow"></div>
 
-                        {/* Premium Abstract Shape Behind Image */}
-                        <div className="absolute -inset-4 bg-linear-to-tr from-accent/20 to-transparent rounded-[2.5rem] rotate-3 blur-sm -z-10 hidden lg:block"></div>
+                        {/* Premium Abstract Shapes Behind Image */}
+                        <div className="absolute -inset-6 bg-linear-to-tr from-accent/30 to-transparent rounded-[3rem] rotate-6 blur-md -z-10 hidden lg:block opacity-50"></div>
+                        <div className="absolute -inset-2 bg-linear-to-bl from-accent/20 to-transparent rounded-[2.5rem] -rotate-3 blur-sm -z-10 hidden lg:block"></div>
 
-                        <div className="relative w-full max-w-[420px] h-[500px] lg:h-[650px] rounded-4xl overflow-hidden border border-white/10 shadow-2xl group bg-background/50">
+                        <div className="relative w-full max-w-[520px] h-[550px] lg:h-[720px] rounded-[2.5rem] lg:rounded-[3.5rem] overflow-hidden border border-white/20 shadow-[0_32px_64px_-12px_rgba(0,0,0,0.6)] group bg-background/50 transform-gpu transition-all duration-700 hover:shadow-accent/20">
                             <Image
-                                src="/images/hero.jpg"
+                                src="/images/hero.jpeg"
                                 alt="Retrato do Advogado Especialista"
                                 fill
                                 quality={100}
@@ -125,26 +126,26 @@ export default function Hero({ onOpenContactModal }: HeroProps) {
                             />
 
                             {/* Premium Overlays */}
-                            {/* 1. Dramatic bottom gradient for blending */}
-                            <div className="absolute inset-0 bg-linear-to-t from-background via-background/20 to-transparent opacity-90 group-hover:opacity-100 transition-opacity duration-500"></div>
+                            {/* 1. Dramatic bottom gradient for blending - softer */}
+                            <div className="absolute inset-0 bg-linear-to-t from-background via-background/10 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500"></div>
 
                             {/* 2. Sleek inner glow/border */}
-                            <div className="absolute inset-0 rounded-4xl ring-1 ring-inset ring-white/10 pointer-events-none"></div>
+                            <div className="absolute inset-0 rounded-[2.5rem] lg:rounded-[3.5rem] ring-1 ring-inset ring-white/20 pointer-events-none"></div>
                         </div>
 
-                        {/* Floating Badge */}
+                        {/* Floating Badge - Adjusted Position */}
                         <motion.div
-                            initial={{ opacity: 0, y: 20, x: -20 }}
+                            initial={{ opacity: 0, y: 30, x: -30 }}
                             animate={{ opacity: 1, y: 0, x: 0 }}
-                            transition={{ delay: 0.8, duration: 0.5 }}
-                            className="absolute bottom-6 -left-4 lg:bottom-12 lg:-left-12 glass p-4 lg:p-5 rounded-2xl border border-white/10 shadow-2xl flex items-center space-x-4 backdrop-blur-md bg-background/60"
+                            transition={{ delay: 0.8, duration: 0.6 }}
+                            className="absolute bottom-10 -left-6 lg:bottom-20 lg:-left-8 glass p-5 lg:p-6 rounded-2xl border border-white/20 shadow-2xl flex items-center space-x-4 backdrop-blur-xl bg-background/40 z-20"
                         >
-                            <div className="w-10 h-10 lg:w-12 lg:h-12 rounded-full bg-accent/20 flex items-center justify-center shrink-0">
-                                <Shield className="w-5 h-5 lg:w-6 lg:h-6 text-accent" />
+                            <div className="w-12 h-12 lg:w-14 lg:h-14 rounded-full bg-accent/30 flex items-center justify-center shrink-0 shadow-lg shadow-accent/20">
+                                <Shield className="w-6 h-6 lg:w-7 lg:h-7 text-accent" />
                             </div>
                             <div>
-                                <p className="text-sm lg:text-base font-bold text-foreground">Alta Complexidade</p>
-                                <p className="text-xs lg:text-sm text-muted">Foco em Resultados</p>
+                                <p className="text-base lg:text-lg font-bold text-foreground tracking-tight">Alta Complexidade</p>
+                                <p className="text-xs lg:text-sm text-muted/90 font-medium">Foco em Resultados</p>
                             </div>
                         </motion.div>
                     </motion.div>

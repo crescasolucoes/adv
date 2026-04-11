@@ -145,7 +145,7 @@ export default function Footer() {
                 <div className="mt-12 pt-8 border-t border-white/10">
                     <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
                         <p className="text-sm text-muted text-center md:text-left">
-                            © {currentYear} Advocacia Especializada. Todos os direitos reservados.
+                            © {currentYear} {SITE_CONFIG.name} Advogado. Todos os direitos reservados.
                         </p>
                         <p className="text-xs text-muted/70 text-center md:text-right max-w-md">
                             As informações contidas neste site não substituem uma consulta jurídica.
