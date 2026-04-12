@@ -1,37 +1,53 @@
 import { Briefcase, Calculator, LucideProps, Shield } from "lucide-react";
 
 export const SITE_CONFIG = {
-    name: "Arthur Ybson",
+    name: process.env.NEXT_PUBLIC_SITE_NAME || "Arthur Ybson",
+    fullName: process.env.NEXT_PUBLIC_SITE_FULL_NAME || "Arthur Ybson Advocacia e Consultoria Jurídica",
     description: "Assessoria jurídica estratégica com foco em segurança e resultado",
-    url: "https://advocacia.com.br",
+    url: process.env.NEXT_PUBLIC_SITE_URL || "https://arthurybson.adv.br",
 
     contact: {
-        phone: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "",
-        email: process.env.NEXT_PUBLIC_EMAIL || "",
-        whatsapp: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "",
+        phone: process.env.NEXT_PUBLIC_PHONE || "84 9 8776-8280",
+        email: process.env.NEXT_PUBLIC_EMAIL || "contato@arthurybson.adv.br",
+        whatsapp: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "84987768280",
+        whatsappDisplay: process.env.NEXT_PUBLIC_WHATSAPP_DISPLAY || "84 9 8776-8280",
         address: {
-            street: process.env.NEXT_PUBLIC_STREET || "",
-            city: process.env.NEXT_PUBLIC_CITY || "",
-            state: process.env.NEXT_PUBLIC_STATE || "",
-            zip: process.env.NEXT_PUBLIC_ZIP || "",
+            street: process.env.NEXT_PUBLIC_STREET || "Rua Meira e Sá, 293 (Moura e Advogados Associados), Sala 6",
+            neighborhood: process.env.NEXT_PUBLIC_NEIGHBORHOOD || "Centro",
+            city: process.env.NEXT_PUBLIC_CITY || "Mossoró",
+            state: process.env.NEXT_PUBLIC_STATE || "RN",
+            full: process.env.NEXT_PUBLIC_ADDRESS_FULL || "Rua Meira e Sá, 293 (Moura e Advogados Associados), Sala 6, Centro, Mossoró/RN",
         },
     },
 
     businessHours: {
-        weekdays: process.env.NEXT_PUBLIC_BUSINESS_HOURS_WEEKDAYS || "",
+        weekdays: process.env.NEXT_PUBLIC_BUSINESS_HOURS_WEEKDAYS || "07h30 às 17h30",
         saturday: process.env.NEXT_PUBLIC_BUSINESS_HOURS_SATURDAY || "",
     },
 
     social: {
+        instagram: process.env.NEXT_PUBLIC_INSTAGRAM || "arthurybson",
         linkedin: process.env.NEXT_PUBLIC_LINKEDIN || "",
-        instagram: process.env.NEXT_PUBLIC_INSTAGRAM || "",
         facebook: process.env.NEXT_PUBLIC_FACEBOOK || "",
     },
 
     oab: {
-        primary: process.env.NEXT_PUBLIC_OAB_PRIMARY || ""
+        primary: process.env.NEXT_PUBLIC_OAB_PRIMARY || "OAB/RN - 20.628"
     },
+
+    education: [
+        "Graduado em Direito pela Ufersa",
+        "Pós-graduado em Direito Tributário"
+    ],
+
+    experience: [
+        "2 anos de estágio no escritório Moura & Advogados Associados",
+        "1 ano e 6 meses de estágio na Advocacia Geral da União",
+        "1 ano de estágio no Gabinete da 10ª Vara Federal em Mossoró/RN"
+    ],
 };
+
+
 
 type IconMap = Record<string, React.ForwardRefExoticComponent<Omit<LucideProps, "ref"> & React.RefAttributes<SVGSVGElement>>>;
 export const iconMap: IconMap = {

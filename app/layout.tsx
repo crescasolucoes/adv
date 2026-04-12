@@ -30,7 +30,9 @@ export const metadata: Metadata = {
     type: "website",
     locale: "pt_BR",
   },
+
 };
+
 
 export default function RootLayout({
   children,

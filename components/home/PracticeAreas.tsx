@@ -38,11 +38,11 @@ export default function PracticeAreas() {
                                 transition={{ delay: index * 0.1, duration: 0.6 }}
                             >
                                 <Link href={`/areas#${area.slug}`}>
-                                    <div className="premium-card p-8 h-full group cursor-pointer">
+                                    <div className="premium-card p-8 h-full group cursor-pointer transform-gpu transition-all duration-300">
                                         <div className="flex items-start justify-between mb-6">
                                             <div className="relative">
-                                                <div className="absolute inset-0 bg-accent/20 blur-xl group-hover:blur-2xl transition-all duration-300"></div>
-                                                <div className="relative inline-flex items-center justify-center w-14 h-14 bg-accent/10 border border-accent/30 group-hover:bg-accent/20 transition-colors duration-300">
+                                                <div className="absolute inset-0 bg-accent/15 blur-lg group-hover:blur-xl transition-all duration-300 transform-gpu"></div>
+                                                <div className="relative inline-flex items-center justify-center w-14 h-14 bg-accent/10 border border-accent/30 group-hover:bg-accent/20 transition-colors duration-300 transform-gpu">
                                                     <Icon className="w-7 h-7 text-accent" />
                                                 </div>
                                             </div>

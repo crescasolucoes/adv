@@ -99,8 +99,7 @@ export default function Footer() {
                                 <MapPin className="w-5 h-5 text-accent shrink-0 mt-0.5" />
                                 <span className="text-muted">
                                     {SITE_CONFIG.contact.address.street}<br />
-                                    {SITE_CONFIG.contact.address.city} - {SITE_CONFIG.contact.address.state}<br />
-                                    CEP: {SITE_CONFIG.contact.address.zip}
+                                    {SITE_CONFIG.contact.address.neighborhood}, {SITE_CONFIG.contact.address.city} - {SITE_CONFIG.contact.address.state}
                                 </span>
                             </li>
                             <li className="flex items-center space-x-3 text-sm">

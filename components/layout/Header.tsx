@@ -4,7 +4,9 @@ import Link from "next/link";
 import { useState } from "react";
 import { Menu, X, MessageCircle } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { SITE_CONFIG } from "@/lib/constants";
 import { generateWhatsAppLink } from "@/lib/utils";
+import Image from "next/image";
 
 const navigation = [
     { name: "Home", href: "/" },
@@ -19,21 +21,28 @@ export default function Header() {
 
     return (
         <header className="fixed top-0 left-0 right-0 z-50 animate-fade-in">
-            <div className="absolute inset-0 bg-background/80 backdrop-blur-xl border-b border-accent/20"></div>
+            <div className="absolute inset-0 bg-background/80 backdrop-blur-lg border-b border-accent/20"></div>
 
             <nav className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-20">
                     {/* Logo */}
                     <Link href="/" className="flex items-center space-x-3 group relative">
                         <div className="absolute -left-4 top-1/2 -translate-y-1/2 w-1 h-12 bg-accent transform origin-left group-hover:scale-y-125 transition-transform duration-300"></div>
-                        <div className="flex flex-col">
+                        {/* <div className="flex flex-col">
                             <span className="text-2xl font-display font-bold text-foreground group-hover:text-accent transition-colors duration-300 tracking-tight">
-                                Arthur Ybson
+                                {SITE_CONFIG.name}
                             </span>
                             <span className="text-[10px] text-muted uppercase tracking-[0.2em] font-semibold">
                                 Advogado
                             </span>
-                        </div>
+                        </div> */}
+                        <Image
+                            src="/images/logo.jpg"
+                            alt={SITE_CONFIG.fullName}
+                            width={100}
+                            height={100}
+                            className="object-contain"
+                        />
                     </Link>
 
                     {/* Desktop Navigation */}
