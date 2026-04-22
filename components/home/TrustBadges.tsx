@@ -4,11 +4,11 @@ import { motion } from "framer-motion";
 import { ShieldCheck, Users, Lock, Scale } from "lucide-react";
 
 const badges = [
-    {
-        icon: ShieldCheck,
-        title: "OAB Regular",
-        description: "Registro ativo e em dia com a Ordem dos Advogados do Brasil",
-    },
+    // {
+    //     icon: ShieldCheck,
+    //     title: "OAB Regular",
+    //     description: "Registro ativo e em dia com a Ordem dos Advogados do Brasil",
+    // },
     {
         icon: Users,
         title: "Atendimento Personalizado",

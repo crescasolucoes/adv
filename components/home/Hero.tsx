@@ -120,22 +120,6 @@ export default function Hero({ onOpenContactModal }: HeroProps) {
                             <div className="absolute inset-0 bg-linear-to-t from-background via-background/10 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500"></div>
                             <div className="absolute inset-0 rounded-[2.5rem] lg:rounded-[3.5rem] ring-1 ring-inset ring-white/20 pointer-events-none"></div>
                         </div>
-
-                        {/* Floating Badge */}
-                        <motion.div
-                            initial={{ opacity: 0, y: 20, x: -20 }}
-                            animate={{ opacity: 1, y: 0, x: 0 }}
-                            transition={{ delay: 0.8, duration: 0.6 }}
-                            className="absolute bottom-10 -left-6 lg:bottom-20 lg:-left-8 glass p-5 lg:p-6 rounded-2xl border border-white/20 shadow-2xl flex items-center space-x-4 backdrop-blur-lg bg-background/40 z-20 transform-gpu"
-                        >
-                            <div className="w-12 h-12 lg:w-14 lg:h-14 rounded-full bg-accent/30 flex items-center justify-center shrink-0 shadow-lg shadow-accent/20">
-                                <Shield className="w-6 h-6 lg:w-7 lg:h-7 text-accent" />
-                            </div>
-                            <div>
-                                <p className="text-base lg:text-lg font-bold text-foreground tracking-tight">Alta Complexidade</p>
-                                <p className="text-xs lg:text-sm text-muted/90 font-medium">Foco em Resultados</p>
-                            </div>
-                        </motion.div>
                     </motion.div>
                 </div>
             </div>
