@@ -8,7 +8,7 @@ import {  PRACTICE_AREAS, iconMap } from "@/lib/constants";
 
 export default function PracticeAreas() {
     return (
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section id="areas" className="py-20 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
                 {/* Section Header */}
                 <motion.div

@@ -8,12 +8,12 @@ export default function FinalCTA() {
     return (
         <section className="py-20 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-accent/20 via-accent/10 to-transparent p-12 sm:p-16 text-center border border-accent/30"
-                >
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="relative overflow-hidden rounded-3xl bg-linear-to-br from-accent/20 via-accent/10 to-transparent p-12 sm:p-16 text-center border border-accent/30"
+                    >
                     {/* Background Pattern */}
                     <div className="absolute inset-0 noise opacity-30"></div>
 

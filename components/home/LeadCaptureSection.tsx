@@ -30,7 +30,7 @@ export default function LeadCaptureSection() {
     };
 
     return (
-        <section className="py-24 bg-background relative overflow-hidden" id="agendar-consulta">
+        <section className="py-24 bg-background relative overflow-hidden" id="contato">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                     <motion.div
@@ -79,14 +79,14 @@ export default function LeadCaptureSection() {
                             <h3 className="text-2xl font-display font-bold text-white mb-2">
                                 Comece sua Análise Agora
                             </h3>
-                            <p className="text-muted text-sm">
+                            <p className="text-white text-sm">
                                 Preencha os campos para iniciarmos o seu atendimento.
                             </p>
                         </div>
 
                         <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
                             <div>
-                                <label htmlFor="name" className="block text-sm font-medium text-foreground/80 mb-1.5">
+                                <label htmlFor="name" className="block text-sm font-medium text-white mb-1.5">
                                     Nome Completo
                                 </label>
                                 <input
@@ -99,7 +99,7 @@ export default function LeadCaptureSection() {
                             </div>
 
                             <div>
-                                <label htmlFor="phone" className="block text-sm font-medium text-foreground/80 mb-1.5">
+                                <label htmlFor="phone" className="block text-sm font-medium text-white mb-1.5">
                                     WhatsApp / Telefone
                                 </label>
                                 <input
@@ -112,7 +112,7 @@ export default function LeadCaptureSection() {
                             </div>
 
                             <div>
-                                <label htmlFor="area" className="block text-sm font-medium text-foreground/80 mb-1.5">
+                                <label htmlFor="area" className="block text-sm font-medium text-white mb-1.5">
                                     Área de Interesse
                                 </label>
                                 <div className="relative">
@@ -142,7 +142,7 @@ export default function LeadCaptureSection() {
                                 <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
                             </button>
 
-                            <p className="text-xs text-center text-muted mt-4 flex items-center justify-center gap-1">
+                            <p className="text-xs text-center text-white mt-4 flex items-center justify-center gap-1">
                                 <Shield className="w-3 h-3" />
                                 Seus dados estão protegidos e seguros.
                             </p>

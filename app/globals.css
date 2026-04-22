@@ -2,11 +2,11 @@
 
 @theme {
   --color-background: #ffffff;
-  --color-foreground: #011627;
-  --color-accent: #0077b6;
-  --color-highlight: #00b4d8;
-  --color-secondary: #f0f9ff;
-  --color-muted: #64748b;
+  --color-foreground: #000814;
+  --color-accent: #001d3d;
+  --color-highlight: #003566;
+  --color-secondary: #f8fafc;
+  --color-muted: #475569;
   --color-border: #e2e8f0;
 
   --font-display: var(--font-syne);
@@ -66,7 +66,7 @@
   .glass {
     background-color: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(8px);
-    border: 1px solid rgba(0, 119, 182, 0.1);
+    border: 1px solid rgba(0, 29, 61, 0.1);
   }
 
   .glass-hover {
@@ -75,11 +75,11 @@
 
   .glass-hover:hover {
     background-color: rgba(255, 255, 255, 0.95);
-    border-color: rgba(0, 119, 182, 0.3);
+    border-color: rgba(0, 29, 61, 0.3);
   }
 
   .text-gradient {
-    background: linear-gradient(135deg, #0077b6, #00b4d8, #03045e);
+    background: linear-gradient(135deg, #001d3d, #003566, #000814);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -107,6 +107,7 @@
     color: var(--color-foreground);
     font-family: var(--font-body);
     -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
   }
 
   h1,

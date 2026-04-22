@@ -29,7 +29,7 @@ const steps = [
 
 export default function HowItWorks() {
     return (
-        <section className="py-24 bg-background relative overflow-hidden">
+        <section id="conteudos" className="py-24 bg-background relative overflow-hidden">
             {/* Background Pattern */}
             <div className="absolute top-0 right-0 w-1/3 h-full bg-accent/5 skew-x-12 hidden lg:block"></div>
 
@@ -54,7 +54,7 @@ export default function HowItWorks() {
                                     backgroundPosition: 'center',
                                 }}
                             ></div>
-                            <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80"></div>
+                            <div className="absolute inset-0 bg-linear-to-t from-background via-transparent to-transparent opacity-80"></div>
 
                             {/* Floating Quote Card */}
                             <div className="absolute bottom-8 left-8 right-8 glass p-6 rounded-xl border-l-4 border-accent">
@@ -96,7 +96,7 @@ export default function HowItWorks() {
 
                         <div className="space-y-8 relative">
                             {/* Vertical Line */}
-                            <div className="absolute left-[27px] top-4 bottom-4 w-px bg-gradient-to-b from-accent via-accent/50 to-transparent hidden sm:block"></div>
+                            <div className="absolute left-[27px] top-4 bottom-4 w-px bg-linear-to-b from-accent via-accent/50 to-transparent hidden sm:block"></div>
 
                             {steps.map((step, index) => (
                                 <motion.div

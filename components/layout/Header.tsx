@@ -10,10 +10,11 @@ import Image from "next/image";
 
 const navigation = [
     { name: "Home", href: "/" },
-    // { name: "Sobre", href: "/sobre" },
-    { name: "Áreas de Atuação", href: "/areas" },
-    // { name: "Conteúdos", href: "/conteudos" },
-    // { name: "Contato", href: "/contato" },
+    // { name: "Sobre", href: "#sobre" },
+    { name: "Áreas de Atuação", href: "#areas" },
+    { name: "Conteúdos", href: "#conteudos" },
+    { name: "FAQ", href: "#faq" },
+    { name: "Contato", href: "#contato" },
 ];
 
 export default function Header() {

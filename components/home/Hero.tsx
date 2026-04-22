@@ -14,7 +14,7 @@ export default function Hero({ onOpenContactModal }: HeroProps) {
     const containerRef = useRef<HTMLElement>(null);
 
     return (
-        <section ref={containerRef} className="relative min-h-screen flex items-center justify-center overflow-hidden py-20 lg:py-0">
+        <section id="sobre" ref={containerRef} className="relative min-h-screen flex items-center justify-center overflow-hidden py-20 lg:py-0">
             {/* Parallax Background Image */}
             <div
                 className="absolute inset-0 z-0"
@@ -25,7 +25,7 @@ export default function Hero({ onOpenContactModal }: HeroProps) {
                 }}
             >
                 <div className="absolute inset-0 bg-background/80 backdrop-blur-[1px]"></div>
-                <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-transparent"></div>
+                <div className="absolute inset-0 bg-linear-to-r from-background via-background/70 to-transparent"></div>
             </div>
 
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full mt-20 lg:mt-0">
@@ -76,7 +76,7 @@ export default function Hero({ onOpenContactModal }: HeroProps) {
 
                         <div className="flex flex-col sm:flex-row gap-4 mb-8">
                             <button
-                                onClick={() => document.getElementById("agendar-consulta")?.scrollIntoView({ behavior: "smooth" })}
+                                onClick={() => document.getElementById("contato")?.scrollIntoView({ behavior: "smooth" })}
                                 className="bg-accent hover:bg-accent/90 text-background font-bold px-8 py-4 rounded-lg flex items-center justify-center space-x-2 transition-all duration-300 hover:shadow-lg hover:shadow-accent/20 group cursor-pointer"
                             >
                                 <span>Solicitar Análise de Caso</span>
